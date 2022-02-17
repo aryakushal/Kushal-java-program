@@ -1,21 +1,17 @@
-package pack.com;
-
-import java.util.Scanner;
+package p1;
 
 public class SimpleInterest {
 
 	public static void main(String[] args) {
+		//si=(p*t*r)/100;
 		float p,t,r,si;
-		Scanner sc = new Scanner(System.in);
-System.out.println("enter principal amount");
-p=sc.nextFloat();
-System.out.println("enter time");
-t=sc.nextFloat();
-System.out.println("enter rate of interest");
-r=sc.nextFloat();
+		p=4500;
+		t=3;
+		r=8;
+		si=(p*t*r)/100;
+		System.out.println("Simple intereset of principle amount "+p+" for years of "+t+" at the rate of "+r+ " is Rs."+si);
 
-si=p*t*r/100;
-System.out.println("simple intrest is"+si);
+
 	}
 
 }
