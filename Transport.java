@@ -37,7 +37,7 @@ void display() {
 	
 
 System.out.println("name\tweight\tbillamt");
-System.out.println("-------------");
+System.out.println("--------------------------");
 System.out.println(name +"\t"+w+"\t"+charge);
 
 }

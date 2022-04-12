@@ -1,27 +1,31 @@
-package pack.com;
-
-//To create thread based application
-//1. Extend your class with Thread class and override public void run()
-//to call run method jvm uses ob.start()
-//start can be used only once on particular object
-class MyThread extends Thread{
-public void run() {
-System.out.println("Inside run "+Thread.currentThread());
-}
-}
+package p8.com;
 
 public class EX2 {
 
-public static void main(String[] args) {
-System.out.println(Thread.currentThread()); //main thread
-MyThread ob=new MyThread();
-MyThread ob1=new MyThread();
-ob.setName("first"); //change the predefined name
-ob1.setName("second");
-ob.start();//Excecution of Thread is controlled by JVM
-          //You cannot predict the output
-ob1.start();
-//thread can be started only once on particular object
-//if you start more than once, It will throw IlligalThreadState Exception
-}
-}
+		public static void main(String[] args) {
+			int a=10,b=0,c=0;
+			int ar[]=new int[3];
+		
+			System.out.println("Before divison");
+			
+			try {
+				c=a/b;
+			System.out.println("after a/b"+c);
+			}
+			catch(ArithmeticException ex) {
+				System.out.println("inside catch");
+				ex.printStackTrace();
+			}
+			catch(ArrayIndexOutOfBoundsException e) {
+				e.printStackTrace();
+			}
+			finally {
+				System.out.println("finally will executes always");
+				System.out.println("finally block is used to close resourse date base,network");
+			}				
+			System.out.println("after array assignment");
+
+
+		}}
+
+	
